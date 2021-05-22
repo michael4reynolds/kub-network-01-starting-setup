@@ -7,11 +7,12 @@ services:
     environment:
       AUTH_ADDRESS: auth
       AUTH_SERVICE_SERVICE_HOST: auth
-    ports:
-      - '8080:8080'
+    ports: 
+      - "8080:8080"
   tasks:
     build: ./tasks-api
-    ports:
-      - '8000:8000'
+    ports: 
+      - "8000:8000"
     environment:
       TASKS_FOLDER: tasks
+      AUTH_ADDRESS: auth
